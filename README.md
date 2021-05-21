@@ -258,4 +258,7 @@ Change the Playbook to point to the group “web”:
 Now run the Playbook:
 
 [student<X>@ansible-1 ansible-files]$ ansible-playbook apache.yml
+ 
+  ansible all -m shell -a 'curl http://localhost:80'
+  
 Finally check if Apache is now running on both servers. Identify the IP addresses of the nodes in your inventory first, and afterwards use them each in the ad hoc command with the uri module as we already did with the node1 above. All output should be green.
